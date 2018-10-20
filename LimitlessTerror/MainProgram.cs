@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace LimitlessTerror
 {
-    static class Program
+    static class MainProgram
     {
         /// <summary>
         /// 应用程序的主入口点。
