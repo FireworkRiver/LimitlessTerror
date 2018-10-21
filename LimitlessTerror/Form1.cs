@@ -17,9 +17,22 @@ namespace LimitlessTerror
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void tabPage1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void VirtueEvil_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox ThisBox = (CheckBox)sender;
+            if (ThisBox.Checked)
+            {
+                ThisBox.ForeColor = Color.Black;
+            }
+            else
+            {
+                ThisBox.ForeColor = Color.Silver;
+            }
         }
     }
 }
