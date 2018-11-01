@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.PersonalINformation = new System.Windows.Forms.TabPage();
+            this.OpenPicture = new System.Windows.Forms.Button();
             this.VirtueEvil = new System.Windows.Forms.GroupBox();
             this.Wrath = new System.Windows.Forms.CheckBox();
             this.Temperance = new System.Windows.Forms.CheckBox();
@@ -47,7 +48,6 @@
             this.Charity = new System.Windows.Forms.CheckBox();
             this.BackgroundText = new System.Windows.Forms.TextBox();
             this.Backgroud = new System.Windows.Forms.Label();
-            this.AddressOfPicture = new System.Windows.Forms.TextBox();
             this.ApperenceDicscriptionText = new System.Windows.Forms.TextBox();
             this.AppearancePicture = new System.Windows.Forms.PictureBox();
             this.Appearance = new System.Windows.Forms.Label();
@@ -77,14 +77,26 @@
             this.TheNameOfSpeciality = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TheMessageOfSpeciality = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Attributes = new System.Windows.Forms.TabPage();
-            this.NewAttributes = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.AddNewAttributes = new System.Windows.Forms.Button();
+            this.SumAttributeGrids = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeleteAttributeType = new System.Windows.Forms.Button();
+            this.AttributesTypeError = new System.Windows.Forms.GroupBox();
+            this.AttributesTypeErrorText = new System.Windows.Forms.Label();
+            this.SkillErrorConfirm = new System.Windows.Forms.Button();
             this.AddAttributesType = new System.Windows.Forms.Button();
             this.AttributesTypeText = new System.Windows.Forms.TextBox();
             this.AttributesType = new System.Windows.Forms.Label();
             this.AttributesGrids = new System.Windows.Forms.DataGridView();
+            this.TypeOfAttributes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -95,13 +107,25 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Skill = new System.Windows.Forms.TabPage();
+            this.SkillError = new System.Windows.Forms.GroupBox();
+            this.SkillErrorText = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.DeletSkill = new System.Windows.Forms.Button();
             this.AddNewSkill = new System.Windows.Forms.Button();
             this.NewSkillText = new System.Windows.Forms.TextBox();
             this.NewSkill = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.SkillGridView = new System.Windows.Forms.DataGridView();
+            this.技能名 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SkillLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Major = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DerivedAttributes = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.AddNewDerivedAttributes = new System.Windows.Forms.Button();
+            this.NewDerivedAttributesName = new System.Windows.Forms.TextBox();
+            this.NewDerivedAttributesText = new System.Windows.Forms.Label();
+            this.DerivedAttributesGridView = new System.Windows.Forms.DataGridView();
+            this.DerivedAttributesName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DerivedAttributesValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dpText = new System.Windows.Forms.TextBox();
             this.AutoSucessText = new System.Windows.Forms.TextBox();
             this.TypeCombo = new System.Windows.Forms.ComboBox();
@@ -110,6 +134,9 @@
             this.AutoSucess = new System.Windows.Forms.Label();
             this.DP = new System.Windows.Forms.Label();
             this.Source = new System.Windows.Forms.Label();
+            this.Export = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.PersonalINformation.SuspendLayout();
             this.VirtueEvil.SuspendLayout();
@@ -118,9 +145,14 @@
             this.SpecialityError.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpecialityGrid)).BeginInit();
             this.Attributes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SumAttributeGrids)).BeginInit();
+            this.AttributesTypeError.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AttributesGrids)).BeginInit();
             this.Skill.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SkillError.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SkillGridView)).BeginInit();
+            this.DerivedAttributes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DerivedAttributesGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -139,10 +171,10 @@
             // 
             // PersonalINformation
             // 
+            this.PersonalINformation.Controls.Add(this.OpenPicture);
             this.PersonalINformation.Controls.Add(this.VirtueEvil);
             this.PersonalINformation.Controls.Add(this.BackgroundText);
             this.PersonalINformation.Controls.Add(this.Backgroud);
-            this.PersonalINformation.Controls.Add(this.AddressOfPicture);
             this.PersonalINformation.Controls.Add(this.ApperenceDicscriptionText);
             this.PersonalINformation.Controls.Add(this.AppearancePicture);
             this.PersonalINformation.Controls.Add(this.Appearance);
@@ -166,7 +198,17 @@
             this.PersonalINformation.TabIndex = 0;
             this.PersonalINformation.Text = "基础个人信息";
             this.PersonalINformation.UseVisualStyleBackColor = true;
-            this.PersonalINformation.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // OpenPicture
+            // 
+            this.OpenPicture.Location = new System.Drawing.Point(335, 181);
+            this.OpenPicture.Margin = new System.Windows.Forms.Padding(2);
+            this.OpenPicture.Name = "OpenPicture";
+            this.OpenPicture.Size = new System.Drawing.Size(97, 29);
+            this.OpenPicture.TabIndex = 19;
+            this.OpenPicture.Text = "打开图片";
+            this.OpenPicture.UseVisualStyleBackColor = true;
+            this.OpenPicture.Click += new System.EventHandler(this.OpenPicture_Click);
             // 
             // VirtueEvil
             // 
@@ -396,14 +438,6 @@
             this.Backgroud.TabIndex = 16;
             this.Backgroud.Text = "概述";
             // 
-            // AddressOfPicture
-            // 
-            this.AddressOfPicture.Location = new System.Drawing.Point(304, 214);
-            this.AddressOfPicture.Margin = new System.Windows.Forms.Padding(2);
-            this.AddressOfPicture.Name = "AddressOfPicture";
-            this.AddressOfPicture.Size = new System.Drawing.Size(165, 21);
-            this.AddressOfPicture.TabIndex = 15;
-            // 
             // ApperenceDicscriptionText
             // 
             this.ApperenceDicscriptionText.Location = new System.Drawing.Point(304, 254);
@@ -421,8 +455,8 @@
             this.AppearancePicture.Location = new System.Drawing.Point(304, 10);
             this.AppearancePicture.Margin = new System.Windows.Forms.Padding(2);
             this.AppearancePicture.Name = "AppearancePicture";
-            this.AppearancePicture.Size = new System.Drawing.Size(209, 195);
-            this.AppearancePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.AppearancePicture.Size = new System.Drawing.Size(158, 157);
+            this.AppearancePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.AppearancePicture.TabIndex = 13;
             this.AppearancePicture.TabStop = false;
             // 
@@ -592,7 +626,7 @@
             this.SpecialityErrorConfirm.TabIndex = 0;
             this.SpecialityErrorConfirm.Text = "确认";
             this.SpecialityErrorConfirm.UseVisualStyleBackColor = true;
-            this.SpecialityErrorConfirm.Click += new System.EventHandler(this.SpecialityErrorConfirm_Click);
+            this.SpecialityErrorConfirm.Click += new System.EventHandler(this.ErrorConfirm_Click);
             // 
             // SpecialityDescription
             // 
@@ -684,10 +718,9 @@
             // 
             // Attributes
             // 
-            this.Attributes.Controls.Add(this.NewAttributes);
-            this.Attributes.Controls.Add(this.textBox1);
-            this.Attributes.Controls.Add(this.comboBox1);
-            this.Attributes.Controls.Add(this.AddNewAttributes);
+            this.Attributes.Controls.Add(this.SumAttributeGrids);
+            this.Attributes.Controls.Add(this.DeleteAttributeType);
+            this.Attributes.Controls.Add(this.AttributesTypeError);
             this.Attributes.Controls.Add(this.AddAttributesType);
             this.Attributes.Controls.Add(this.AttributesTypeText);
             this.Attributes.Controls.Add(this.AttributesType);
@@ -700,39 +733,148 @@
             this.Attributes.Text = "属性";
             this.Attributes.UseVisualStyleBackColor = true;
             // 
-            // NewAttributes
+            // SumAttributeGrids
             // 
-            this.NewAttributes.AutoSize = true;
-            this.NewAttributes.Location = new System.Drawing.Point(16, 502);
-            this.NewAttributes.Name = "NewAttributes";
-            this.NewAttributes.Size = new System.Drawing.Size(65, 12);
-            this.NewAttributes.TabIndex = 8;
-            this.NewAttributes.Text = "增加属性：";
+            this.SumAttributeGrids.AllowUserToAddRows = false;
+            this.SumAttributeGrids.AllowUserToDeleteRows = false;
+            this.SumAttributeGrids.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SumAttributeGrids.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10});
+            this.SumAttributeGrids.Location = new System.Drawing.Point(0, 298);
+            this.SumAttributeGrids.Margin = new System.Windows.Forms.Padding(2);
+            this.SumAttributeGrids.Name = "SumAttributeGrids";
+            this.SumAttributeGrids.ReadOnly = true;
+            this.SumAttributeGrids.RowTemplate.Height = 27;
+            this.SumAttributeGrids.Size = new System.Drawing.Size(826, 121);
+            this.SumAttributeGrids.TabIndex = 11;
             // 
-            // textBox1
+            // dataGridViewTextBoxColumn1
             // 
-            this.textBox1.Location = new System.Drawing.Point(226, 498);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(42, 21);
-            this.textBox1.TabIndex = 7;
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.HeaderText = "类型";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // comboBox1
+            // dataGridViewTextBoxColumn2
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(87, 499);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 20);
-            this.comboBox1.TabIndex = 6;
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.HeaderText = "力量";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // AddNewAttributes
+            // dataGridViewTextBoxColumn3
             // 
-            this.AddNewAttributes.Location = new System.Drawing.Point(287, 498);
-            this.AddNewAttributes.Name = "AddNewAttributes";
-            this.AddNewAttributes.Size = new System.Drawing.Size(75, 23);
-            this.AddNewAttributes.TabIndex = 5;
-            this.AddNewAttributes.Text = "增加新属性";
-            this.AddNewAttributes.UseVisualStyleBackColor = true;
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.HeaderText = "敏捷";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.HeaderText = "耐力";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn5.HeaderText = "智力";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn6.HeaderText = "感知";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn7.HeaderText = "决心";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn8.HeaderText = "风度";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn9.HeaderText = "操控";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn10.HeaderText = "沉着";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // DeleteAttributeType
+            // 
+            this.DeleteAttributeType.Location = new System.Drawing.Point(304, 439);
+            this.DeleteAttributeType.Name = "DeleteAttributeType";
+            this.DeleteAttributeType.Size = new System.Drawing.Size(75, 23);
+            this.DeleteAttributeType.TabIndex = 10;
+            this.DeleteAttributeType.Text = "删除类型";
+            this.DeleteAttributeType.UseVisualStyleBackColor = true;
+            this.DeleteAttributeType.Click += new System.EventHandler(this.DeleteAttributeType_Click);
+            // 
+            // AttributesTypeError
+            // 
+            this.AttributesTypeError.Controls.Add(this.AttributesTypeErrorText);
+            this.AttributesTypeError.Controls.Add(this.SkillErrorConfirm);
+            this.AttributesTypeError.Location = new System.Drawing.Point(627, 444);
+            this.AttributesTypeError.Name = "AttributesTypeError";
+            this.AttributesTypeError.Size = new System.Drawing.Size(171, 89);
+            this.AttributesTypeError.TabIndex = 9;
+            this.AttributesTypeError.TabStop = false;
+            this.AttributesTypeError.Visible = false;
+            // 
+            // AttributesTypeErrorText
+            // 
+            this.AttributesTypeErrorText.AutoSize = true;
+            this.AttributesTypeErrorText.Location = new System.Drawing.Point(6, 29);
+            this.AttributesTypeErrorText.Name = "AttributesTypeErrorText";
+            this.AttributesTypeErrorText.Size = new System.Drawing.Size(0, 12);
+            this.AttributesTypeErrorText.TabIndex = 1;
+            // 
+            // SkillErrorConfirm
+            // 
+            this.SkillErrorConfirm.Location = new System.Drawing.Point(46, 57);
+            this.SkillErrorConfirm.Name = "SkillErrorConfirm";
+            this.SkillErrorConfirm.Size = new System.Drawing.Size(75, 23);
+            this.SkillErrorConfirm.TabIndex = 0;
+            this.SkillErrorConfirm.Text = "确认";
+            this.SkillErrorConfirm.UseVisualStyleBackColor = true;
+            this.SkillErrorConfirm.Click += new System.EventHandler(this.ErrorConfirm_Click);
             // 
             // AddAttributesType
             // 
@@ -742,6 +884,7 @@
             this.AddAttributesType.TabIndex = 4;
             this.AddAttributesType.Text = "添加新类型";
             this.AddAttributesType.UseVisualStyleBackColor = true;
+            this.AddAttributesType.Click += new System.EventHandler(this.AddAttributesType_Click);
             // 
             // AttributesTypeText
             // 
@@ -761,8 +904,11 @@
             // 
             // AttributesGrids
             // 
+            this.AttributesGrids.AllowDrop = true;
+            this.AttributesGrids.AllowUserToAddRows = false;
             this.AttributesGrids.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.AttributesGrids.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TypeOfAttributes,
             this.Column1,
             this.Column2,
             this.Column3,
@@ -772,73 +918,94 @@
             this.Column7,
             this.Column8,
             this.Column9});
+            this.AttributesGrids.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.AttributesGrids.Location = new System.Drawing.Point(0, 0);
             this.AttributesGrids.Margin = new System.Windows.Forms.Padding(2);
             this.AttributesGrids.Name = "AttributesGrids";
             this.AttributesGrids.RowTemplate.Height = 27;
-            this.AttributesGrids.Size = new System.Drawing.Size(831, 427);
+            this.AttributesGrids.Size = new System.Drawing.Size(826, 294);
             this.AttributesGrids.TabIndex = 1;
+            this.AttributesGrids.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.AttributesGrids_CellValueChanged);
+            // 
+            // TypeOfAttributes
+            // 
+            this.TypeOfAttributes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TypeOfAttributes.HeaderText = "类型";
+            this.TypeOfAttributes.Name = "TypeOfAttributes";
+            this.TypeOfAttributes.ReadOnly = true;
+            this.TypeOfAttributes.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column1.HeaderText = "力量";
             this.Column1.Name = "Column1";
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column2.HeaderText = "敏捷";
             this.Column2.Name = "Column2";
+            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column3.HeaderText = "耐力";
             this.Column3.Name = "Column3";
+            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column4
             // 
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column4.HeaderText = "智力";
             this.Column4.Name = "Column4";
+            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column5
             // 
             this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column5.HeaderText = "感知";
             this.Column5.Name = "Column5";
+            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column6
             // 
             this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column6.HeaderText = "决心";
             this.Column6.Name = "Column6";
+            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column7
             // 
             this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column7.HeaderText = "风度";
             this.Column7.Name = "Column7";
+            this.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column8
             // 
             this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column8.HeaderText = "操控";
             this.Column8.Name = "Column8";
+            this.Column8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column9
             // 
             this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column9.HeaderText = "沉着";
             this.Column9.Name = "Column9";
+            this.Column9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Skill
             // 
+            this.Skill.Controls.Add(this.SkillError);
+            this.Skill.Controls.Add(this.DeletSkill);
             this.Skill.Controls.Add(this.AddNewSkill);
             this.Skill.Controls.Add(this.NewSkillText);
             this.Skill.Controls.Add(this.NewSkill);
-            this.Skill.Controls.Add(this.dataGridView1);
+            this.Skill.Controls.Add(this.SkillGridView);
             this.Skill.Location = new System.Drawing.Point(4, 22);
             this.Skill.Name = "Skill";
             this.Skill.Padding = new System.Windows.Forms.Padding(3);
@@ -846,6 +1013,45 @@
             this.Skill.TabIndex = 3;
             this.Skill.Text = "技能";
             this.Skill.UseVisualStyleBackColor = true;
+            // 
+            // SkillError
+            // 
+            this.SkillError.Controls.Add(this.SkillErrorText);
+            this.SkillError.Controls.Add(this.button1);
+            this.SkillError.Location = new System.Drawing.Point(626, 443);
+            this.SkillError.Name = "SkillError";
+            this.SkillError.Size = new System.Drawing.Size(171, 89);
+            this.SkillError.TabIndex = 10;
+            this.SkillError.TabStop = false;
+            this.SkillError.Visible = false;
+            // 
+            // SkillErrorText
+            // 
+            this.SkillErrorText.AutoSize = true;
+            this.SkillErrorText.Location = new System.Drawing.Point(6, 29);
+            this.SkillErrorText.Name = "SkillErrorText";
+            this.SkillErrorText.Size = new System.Drawing.Size(0, 12);
+            this.SkillErrorText.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(46, 57);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "确认";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.ErrorConfirm_Click);
+            // 
+            // DeletSkill
+            // 
+            this.DeletSkill.Location = new System.Drawing.Point(317, 473);
+            this.DeletSkill.Name = "DeletSkill";
+            this.DeletSkill.Size = new System.Drawing.Size(75, 23);
+            this.DeletSkill.TabIndex = 8;
+            this.DeletSkill.Text = "删除技能";
+            this.DeletSkill.UseVisualStyleBackColor = true;
+            this.DeletSkill.Click += new System.EventHandler(this.DeletSkill_Click);
             // 
             // AddNewSkill
             // 
@@ -855,6 +1061,7 @@
             this.AddNewSkill.TabIndex = 7;
             this.AddNewSkill.Text = "添加新技能";
             this.AddNewSkill.UseVisualStyleBackColor = true;
+            this.AddNewSkill.Click += new System.EventHandler(this.AddNewSkill_Click);
             // 
             // NewSkillText
             // 
@@ -872,18 +1079,26 @@
             this.NewSkill.TabIndex = 5;
             this.NewSkill.Text = "技能名：";
             // 
-            // dataGridView1
+            // SkillGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SkillGridView.AllowUserToAddRows = false;
+            this.SkillGridView.AllowUserToDeleteRows = false;
+            this.SkillGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SkillGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.技能名,
             this.SkillLevel,
             this.Major});
-            this.dataGridView1.Location = new System.Drawing.Point(-2, 2);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(831, 427);
-            this.dataGridView1.TabIndex = 1;
+            this.SkillGridView.Location = new System.Drawing.Point(-2, 2);
+            this.SkillGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.SkillGridView.Name = "SkillGridView";
+            this.SkillGridView.RowTemplate.Height = 27;
+            this.SkillGridView.Size = new System.Drawing.Size(831, 427);
+            this.SkillGridView.TabIndex = 1;
+            // 
+            // 技能名
+            // 
+            this.技能名.HeaderText = "技能名";
+            this.技能名.Name = "技能名";
             // 
             // SkillLevel
             // 
@@ -898,6 +1113,11 @@
             // 
             // DerivedAttributes
             // 
+            this.DerivedAttributes.Controls.Add(this.button2);
+            this.DerivedAttributes.Controls.Add(this.AddNewDerivedAttributes);
+            this.DerivedAttributes.Controls.Add(this.NewDerivedAttributesName);
+            this.DerivedAttributes.Controls.Add(this.NewDerivedAttributesText);
+            this.DerivedAttributes.Controls.Add(this.DerivedAttributesGridView);
             this.DerivedAttributes.Location = new System.Drawing.Point(4, 22);
             this.DerivedAttributes.Name = "DerivedAttributes";
             this.DerivedAttributes.Padding = new System.Windows.Forms.Padding(3);
@@ -905,6 +1125,65 @@
             this.DerivedAttributes.TabIndex = 4;
             this.DerivedAttributes.Text = "衍生属性";
             this.DerivedAttributes.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(342, 450);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(95, 23);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "删除衍生属性";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // AddNewDerivedAttributes
+            // 
+            this.AddNewDerivedAttributes.Location = new System.Drawing.Point(223, 450);
+            this.AddNewDerivedAttributes.Name = "AddNewDerivedAttributes";
+            this.AddNewDerivedAttributes.Size = new System.Drawing.Size(95, 23);
+            this.AddNewDerivedAttributes.TabIndex = 10;
+            this.AddNewDerivedAttributes.Text = "添加新衍生属性";
+            this.AddNewDerivedAttributes.UseVisualStyleBackColor = true;
+            // 
+            // NewDerivedAttributesName
+            // 
+            this.NewDerivedAttributesName.Location = new System.Drawing.Point(98, 453);
+            this.NewDerivedAttributesName.Name = "NewDerivedAttributesName";
+            this.NewDerivedAttributesName.Size = new System.Drawing.Size(100, 21);
+            this.NewDerivedAttributesName.TabIndex = 9;
+            // 
+            // NewDerivedAttributesText
+            // 
+            this.NewDerivedAttributesText.Location = new System.Drawing.Point(27, 456);
+            this.NewDerivedAttributesText.Name = "NewDerivedAttributesText";
+            this.NewDerivedAttributesText.Size = new System.Drawing.Size(50, 12);
+            this.NewDerivedAttributesText.TabIndex = 8;
+            this.NewDerivedAttributesText.Text = "新衍生属性：";
+            // 
+            // DerivedAttributesGridView
+            // 
+            this.DerivedAttributesGridView.AllowUserToAddRows = false;
+            this.DerivedAttributesGridView.AllowUserToDeleteRows = false;
+            this.DerivedAttributesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DerivedAttributesGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DerivedAttributesName,
+            this.DerivedAttributesValue});
+            this.DerivedAttributesGridView.Location = new System.Drawing.Point(0, 2);
+            this.DerivedAttributesGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.DerivedAttributesGridView.Name = "DerivedAttributesGridView";
+            this.DerivedAttributesGridView.RowTemplate.Height = 27;
+            this.DerivedAttributesGridView.Size = new System.Drawing.Size(831, 427);
+            this.DerivedAttributesGridView.TabIndex = 2;
+            // 
+            // DerivedAttributesName
+            // 
+            this.DerivedAttributesName.HeaderText = "属性名";
+            this.DerivedAttributesName.Name = "DerivedAttributesName";
+            // 
+            // DerivedAttributesValue
+            // 
+            this.DerivedAttributesValue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DerivedAttributesValue.HeaderText = "加值";
+            this.DerivedAttributesValue.Name = "DerivedAttributesValue";
             // 
             // dpText
             // 
@@ -976,12 +1255,37 @@
             this.Source.TabIndex = 19;
             this.Source.Text = "来源：";
             // 
+            // Export
+            // 
+            this.Export.Location = new System.Drawing.Point(27, 609);
+            this.Export.Margin = new System.Windows.Forms.Padding(2);
+            this.Export.Name = "Export";
+            this.Export.Size = new System.Drawing.Size(79, 43);
+            this.Export.TabIndex = 23;
+            this.Export.Text = "导出";
+            this.Export.UseVisualStyleBackColor = true;
+            this.Export.Click += new System.EventHandler(this.Export_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(894, 491);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(244, 96);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "作者声明：\r\n此为本人闲暇之余练手之作，仅供交流讨论使用。同时本程序并未进行严格的BUG修复。运行时产生的任何后果，本人概不负责。";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1159, 687);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Export);
             this.Controls.Add(this.Type);
             this.Controls.Add(this.SourceText);
             this.Controls.Add(this.AutoSucess);
@@ -994,6 +1298,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.PersonalINformation.ResumeLayout(false);
             this.PersonalINformation.PerformLayout();
@@ -1007,10 +1312,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.SpecialityGrid)).EndInit();
             this.Attributes.ResumeLayout(false);
             this.Attributes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SumAttributeGrids)).EndInit();
+            this.AttributesTypeError.ResumeLayout(false);
+            this.AttributesTypeError.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AttributesGrids)).EndInit();
             this.Skill.ResumeLayout(false);
             this.Skill.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.SkillError.ResumeLayout(false);
+            this.SkillError.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SkillGridView)).EndInit();
+            this.DerivedAttributes.ResumeLayout(false);
+            this.DerivedAttributes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DerivedAttributesGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1036,7 +1349,6 @@
         private System.Windows.Forms.PictureBox AppearancePicture;
         private System.Windows.Forms.Label Appearance;
         private System.Windows.Forms.Label Backgroud;
-        private System.Windows.Forms.TextBox AddressOfPicture;
         private System.Windows.Forms.TextBox ApperenceDicscriptionText;
         private System.Windows.Forms.TextBox BackgroundText;
         private System.Windows.Forms.GroupBox VirtueEvil;
@@ -1071,26 +1383,11 @@
         private System.Windows.Forms.DataGridView SpecialityGrid;
         private System.Windows.Forms.TabPage Attributes;
         private System.Windows.Forms.DataGridView AttributesGrids;
-        private System.Windows.Forms.Label NewAttributes;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button AddNewAttributes;
         private System.Windows.Forms.Button AddAttributesType;
         private System.Windows.Forms.TextBox AttributesTypeText;
         private System.Windows.Forms.Label AttributesType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.TabPage Skill;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SkillLevel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Major;
+        private System.Windows.Forms.DataGridView SkillGridView;
         private System.Windows.Forms.Button AddNewSkill;
         private System.Windows.Forms.TextBox NewSkillText;
         private System.Windows.Forms.Label NewSkill;
@@ -1100,6 +1397,49 @@
         private System.Windows.Forms.Button SpecialityErrorConfirm;
         private System.Windows.Forms.DataGridViewTextBoxColumn TheNameOfSpeciality;
         private System.Windows.Forms.DataGridViewTextBoxColumn TheMessageOfSpeciality;
+        private System.Windows.Forms.GroupBox AttributesTypeError;
+        private System.Windows.Forms.Label AttributesTypeErrorText;
+        private System.Windows.Forms.Button SkillErrorConfirm;
+        private System.Windows.Forms.Button DeleteAttributeType;
+        private System.Windows.Forms.DataGridView SumAttributeGrids;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TypeOfAttributes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridView DerivedAttributesGridView;
+        private System.Windows.Forms.Button AddNewDerivedAttributes;
+        private System.Windows.Forms.TextBox NewDerivedAttributesName;
+        private System.Windows.Forms.Label NewDerivedAttributesText;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DerivedAttributesName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DerivedAttributesValue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 技能名;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SkillLevel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Major;
+        private System.Windows.Forms.Button DeletSkill;
+        private System.Windows.Forms.GroupBox SkillError;
+        private System.Windows.Forms.Label SkillErrorText;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Export;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button OpenPicture;
+        private System.Windows.Forms.Label label1;
     }
 }
 
